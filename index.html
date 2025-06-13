@@ -113,21 +113,31 @@
   <div class="sim-container">
     <h3>🌊 Ondas</h3>
     <p>
-      Esta simulación representa una superficie de agua animada en 3D con un surfista interactuando sobre ella. La deformación se produce en tiempo real usando funciones de onda: Gerstner (no lineal), Radial y Direccional.
+      Esta simulación representa una superficie de agua dinámica en 3D basada en una cuadrícula tridimensional de puntos que se deforman usando tres funciones de onda: <strong>Gerstner</strong>, <strong>Radial</strong> y <strong>Direccional</strong>.
+    </p>
+    <p>
+      Cada vértice de la malla simula el comportamiento del agua mediante el ajuste continuo de su altura, desplazamientos horizontales y cálculo de normales. El surfista animado, posado sobre la malla, adapta su orientación según la inclinación de la superficie gracias a la normal local.
+    </p>
+    <p>
+      Las funciones de onda:
     </p>
     <ul>
-      <li><strong>Gerstner:</strong> produce crestas realistas con desplazamiento horizontal y vertical.</li>
-      <li><strong>Radial:</strong> genera ondas desde un punto central (impacto de gotas).</li>
-      <li><strong>Direccional:</strong> crea oleaje constante en una dirección.</li>
+      <li><strong>Gerstner:</strong> función no lineal que simula con realismo crestas, desplazamientos verticales y horizontales, útil para simular el mar.</li>
+      <li><strong>Radial:</strong> genera perturbaciones circulares desde un centro fijo, ideales para simular gotas u ondas de impacto.</li>
+      <li><strong>Direccional:</strong> simula oleaje constante en una dirección usando una sinusoide lineal.</li>
     </ul>
     <p>
-      La malla 3D se ajusta dinámicamente según parámetros como <code>spacing</code>, <code>amplitude</code>, <code>waveSpeed</code> y <code>TIME_ACCEL</code>. Los colores simulan profundidad, y las normales permiten sombreado e iluminación realista. El surfista adapta su inclinación según la normal local.
+      Mediante las teclas <code>1</code>, <code>2</code> y <code>3</code> se puede alternar entre las funciones activas. Los parámetros como <code>spacing</code>, <code>amplitude</code>, <code>wavelength</code> y <code>waveSpeed</code> permiten ajustar resolución y comportamiento de la ola. <code>TIME_ACCEL</code> acelera o ralentiza la animación, y <code>TS</code> regula el paso temporal de integración, afectando la precisión y estabilidad.
+    </p>
+    <p>
+      Visualmente, se emplea un degradado entre azul profundo y turquesa, y sombreado realista gracias al uso de normales por vértice, generando brillos y sombras suaves que refuerzan la sensación de profundidad y movimiento del agua.
     </p>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/Hnb2AbMzKhQ" allowfullscreen></iframe>
     </div>
   </div>
 </section>
+
 
 
   <footer>
