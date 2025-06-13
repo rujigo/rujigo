@@ -11,28 +11,28 @@
   <h1>Portafolio de Simulaciones</h1>
 
   <section>
-    <h2>Tema 1: Integradores</h2>
+    <h2>Resumen Tema 1: Integradores</h2>
     <p>
-      En este tema exploramos diferentes métodos de integración numérica para simular el movimiento en sistemas físicos. Estudiamos integradores como el de Euler, Euler mejorado y Verlet, y los aplicamos para predecir trayectorias en simulaciones físicas simples.
+      Este tema introduce los fundamentos matemáticos y físicos necesarios para la simulación por ordenador. Se explica cómo representar el movimiento mediante funciones y ecuaciones paramétricas, así como la importancia del uso de vectores para representar magnitudes físicas como posición y velocidad. Se profundiza en las ecuaciones diferenciales ordinarias (EDO) que modelan el cambio en el tiempo y se estudian diferentes métodos de integración numérica para resolverlas, como el método de Euler, Heun y Runge-Kutta. Finalmente, se aplica este conocimiento a simulaciones gráficas básicas usando ciclos de simulación que actualizan la posición y velocidad de objetos en movimiento.
     </p>
 
     <div class="sim-container">
       <h3>Simulación Bubble Shooter (Método de Euler)</h3>
 
-      <h4>🎯 Objetivo</h4>
+      <h4>Objetivo</h4>
       <p>
         Simular el disparo de una bola verde hacia un conjunto de bolas rojas estáticas usando <strong>Processing</strong>. 
         El usuario elige la dirección con el ratón, y la bola se mueve en línea recta con velocidad constante.
       </p>
 
-      <h4>🔍 Fundamentos Aplicados</h4>
+      <h4>Fundamentos Aplicados</h4>
       <ul>
         <li><strong>Vectores</strong>: Representación de posición y velocidad con <code>PVector</code></li>
         <li><strong>Movimiento sin fuerzas</strong>: Trayectoria uniforme a velocidad constante</li>
         <li><strong>Integrador de Euler Explícito</strong>: Para actualizar la posición</li>
       </ul>
 
-      <h4>🧠 Explicación Detallada</h4>
+      <h4>Explicación</h4>
       <p>
         Al hacer clic con el ratón (<code>mouseClicked</code>), se calcula la dirección del disparo restando la posición inicial
         de la bola y la posición del puntero. Esta dirección se normaliza y se multiplica por una velocidad constante
@@ -50,14 +50,6 @@
       <p>
         Se omiten fuerzas como la gravedad o fricción, por lo tanto el movimiento es lineal y uniforme.
       </p>
-
-      <h4>📚 Relación con el Documento</h4>
-      <ul>
-        <li>Movimiento en ausencia de fuerzas (página 10)</li>
-        <li>Uso de PVector para cinemática (página 9)</li>
-        <li>Aplicación del método de Euler para integración (páginas 24–29)</li>
-      </ul>
-
       <h4>🎬 Vídeo de la Simulación</h4>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" allowfullscreen></iframe>
