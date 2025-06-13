@@ -65,11 +65,70 @@
   </section>
 
   <section>
-    <h2>Tema 3: Objetos Deformables</h2>
+  <h2>Tema 3: Objetos Deformables</h2>
+  <p>
+    En este bloque se exploran simulaciones avanzadas basadas en modelos físicos como masa-muelle y propagación de ondas. Se implementan animaciones complejas de objetos deformables como banderas, pelos y superficies acuáticas. Cada proyecto se centra en cómo fuerzas como la gravedad, el viento, la amortiguación o la interacción con el usuario afectan dinámicamente a sistemas compuestos por partículas conectadas. Se aplican distintas estrategias de conectividad y funciones matemáticas para lograr comportamientos realistas y visualmente atractivos.
+  </p>
+
+  <div class="sim-container">
+    <h3>🟥 Banderas</h3>
     <p>
-      Este tema se enfocó en simular cuerpos que pueden deformarse, como telas o geles. Utilizamos estructuras basadas en partículas conectadas por resortes para representar objetos blandos y cómo estos reaccionan ante fuerzas externas.
+      Esta simulación muestra tres banderas animadas en 3D utilizando el modelo físico masa-muelle. Cada bandera es una malla rectangular compuesta por partículas (nodos) unidas por muelles. El sistema responde a fuerzas como la gravedad, un viento con variaciones suaves (aleatorias en X y también en Y), y amortiguación, para simular de forma realista el movimiento de una tela al viento.
     </p>
-  </section>
+    <p>Se comparan tres variantes del sistema:</p>
+    <ul>
+      <li><strong>Structured:</strong> solo conecta partículas con sus vecinas vertical y horizontalmente.</li>
+      <li><strong>Structured + Shear:</strong> añade conexiones diagonales para mayor realismo.</li>
+      <li><strong>Structured + Shear + Bend:</strong> agrega conexiones de flexión (dobles saltos), lo que simula mejor la resistencia a curvatura.</li>
+    </ul>
+    <p>
+      Visualmente, las banderas son rojas, el fondo blanco, y están montadas sobre mástiles negros.
+    </p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Yu2I_3jdzxg" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="sim-container">
+    <h3>🧵 Pelos</h3>
+    <p>
+      Este proyecto simula una gran cantidad de pelos o cuerdas colgando, también mediante un modelo masa-muelle en 2D. Cada pelo está compuesto por varios puntos conectados por muelles, con un extremo fijo.
+    </p>
+    <p>
+      Las fuerzas que actúan incluyen gravedad, amortiguamiento para evitar oscilaciones infinitas, y la interacción con el ratón (arrastre directo).
+    </p>
+    <p>
+      Interacción del usuario:
+    </p>
+    <ul>
+      <li><code>C</code>: cambia los colores de los pelos aleatoriamente.</li>
+      <li><code>N</code>: los devuelve a color negro.</li>
+      <li><code>R</code>: reinicia la simulación con nuevos pelos aleatorios.</li>
+    </ul>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/35UawjJGPFg" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="sim-container">
+    <h3>🌊 Ondas</h3>
+    <p>
+      Esta simulación representa una superficie de agua animada en 3D con un surfista interactuando sobre ella. La deformación se produce en tiempo real usando funciones de onda: Gerstner (no lineal), Radial y Direccional.
+    </p>
+    <ul>
+      <li><strong>Gerstner:</strong> produce crestas realistas con desplazamiento horizontal y vertical.</li>
+      <li><strong>Radial:</strong> genera ondas desde un punto central (impacto de gotas).</li>
+      <li><strong>Direccional:</strong> crea oleaje constante en una dirección.</li>
+    </ul>
+    <p>
+      La malla 3D se ajusta dinámicamente según parámetros como <code>spacing</code>, <code>amplitude</code>, <code>waveSpeed</code> y <code>TIME_ACCEL</code>. Los colores simulan profundidad, y las normales permiten sombreado e iluminación realista. El surfista adapta su inclinación según la normal local.
+    </p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Hnb2AbMzKhQ" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 
   <footer>
     © 2025 - Estudiante de Ingeniería Multimedia
