@@ -159,7 +159,60 @@
   </div>
 </section>
 
+<section>
+  <h2>Práctica 2: Sistemas de Partículas</h2>
+  <p>
+    En esta práctica simulamos una fuente de agua que emite partículas desde la parte inferior de la ventana. Se generan tres chorros de partículas con dirección ligeramente distinta y aleatoria. Cada partícula se ve afectada por la gravedad y la fricción con el aire, y desaparece al finalizar su tiempo de vida.
+  </p>
+  <p>
+    El sistema está implementado con un <strong>modelo de partículas individual</strong>, y la integración se realiza con el método de <strong>Euler Simpléctico</strong>, lo que garantiza mayor estabilidad frente a otros integradores simples. En cada frame, las partículas activas se actualizan y se dibujan, y las que han “muerto” se eliminan para liberar recursos.
+  </p>
+  <p>
+    La práctica permite controlar la simulación con:
+  </p>
+  <ul>
+    <li><code>R</code>: reiniciar la fuente.</li>
+    <li><code>T</code>: activar o desactivar textura.</li>
+    <li><code>+</code> y <code>-</code>: ajustar el paso temporal.</li>
+  </ul>
+  <p>
+    Además, en pantalla se muestran estadísticas clave como el número de partículas vivas, energía total, y tiempo de simulación. También se puede exportar esta información a un archivo CSV.
+  </p>
+  <p>
+    Como extensión propuesta, se puede implementar el <strong>integrador de Euler Implícito</strong> para lograr simulaciones más estables con pasos temporales mayores.
+  </p>
 
+  <h3>🎬 Vídeo de la Simulación</h3>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Práctica 3 (Ejercicio 2): Fluido con Partículas</h2>
+  <p>
+    Este ejercicio simula el comportamiento de un fluido granular en 2D mediante partículas que responden a la gravedad, colisiones con las paredes del embudo, colisiones entre sí y fricción ambiental.
+  </p>
+  <p>
+    Las partículas se generan mediante clics del ratón o manteniendo presionado, y tienen una vida útil limitada. Cada una se comporta según la física básica, incluyendo rebote elástico, fricción dinámica y fuerzas de repulsión en colisiones.
+  </p>
+  <p>
+    El aspecto más destacado de la simulación es la comparación entre tres métodos de detección de colisiones:
+  </p>
+  <ul>
+    <li><strong>None:</strong> comparación todas contra todas (O(n²))</li>
+    <li><strong>Grid:</strong> agrupación por celdas regulares</li>
+    <li><strong>Hash:</strong> agrupación mediante función hash espacial</li>
+  </ul>
+  <p>
+    Estas estructuras permiten observar el rendimiento del sistema en tiempo real, con métricas como número de partículas, tiempo de integración, detección de colisiones y FPS.
+  </p>
+
+  <h3>🎬 Vídeo de la Simulación</h3>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</section>
 
   <footer>
     © 2025 - Estudiante de Ingeniería Multimedia
