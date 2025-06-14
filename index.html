@@ -244,6 +244,82 @@
   </div>
   </div>
 </section>
+<section>
+  <h2>Práctica 4 - Ejercicio 1: Simulación de Cubos Deformables</h2>
+
+  <p>
+    Este ejercicio simula la caída y deformación de varios cubos en un entorno 3D mediante un modelo físico de <strong>masa-muelle amortiguado</strong>. Cada cubo es una malla tridimensional de partículas conectadas entre sí por muelles que responden a la deformación con fuerzas elásticas y amortiguadoras.
+  </p>
+
+  <h3>Estructura del modelo</h3>
+  <ul>
+    <li><strong>Partículas:</strong> Representan los nodos del cubo. Tienen posición, velocidad, aceleración y masa.</li>
+    <li><strong>Muelles:</strong> Conectan partículas vecinas y diagonales. Aplican fuerzas tipo resorte con amortiguamiento:
+      <pre>F = Ke * elongación + Kd * velocidad_relativa</pre>
+    </li>
+    <li><strong>Colisión con el suelo:</strong> Si una partícula traspasa el plano y=0, se aplica un muelle virtual que la empuja hacia arriba.</li>
+  </ul>
+
+  <h3>⚙Parámetros ajustables</h3>
+  <ul>
+    <li><code>NC</code>: número de nodos por eje (mayor densidad → más precisión)</li>
+    <li><code>SC</code>: tamaño del cubo</li>
+    <li><code>KE</code>: constante elástica</li>
+    <li><code>KD</code>: constante de amortiguamiento</li>
+    <li><code>HC</code>: altura inicial de los cubos</li>
+  </ul>
+
+  <h3>Resultados</h3>
+  <p>
+    Los cubos caen por gravedad, colisionan con el suelo y se deforman visiblemente. La amortiguación disipa energía, y con el tiempo el sistema tiende al reposo. Se genera un archivo CSV con FPS y número de conexiones en cada instante para analizar el rendimiento.
+  </p>
+
+  <h3>Vídeo de la simulación</h3>
+  <div class="video-container">
+    <iframe src="https://youtube.com/embed/ijsnpbtb-Cc" allowfullscreen></iframe>
+  </div>
+</section>
+
+  <section>
+  <h2>Simulación de Olas (Práctica 4 - Ejercicio 2)</h2>
+
+  <p>Este proyecto simula un entorno marino 3D con diferentes tipos de olas y objetos que flotan y reaccionan de forma realista a la superficie del agua.</p>
+
+  <h3>Tipos de Olas Simuladas</h3>
+  <ul>
+    <li><strong>Olas Gerstner:</strong> Representan olas marinas realistas con curvatura. Usan desplazamientos horizontales y verticales para una animación fluida.</li>
+    <li><strong>Olas Radiales:</strong> Propagan ondas circulares desde un punto central (como una piedra cayendo al agua).</li>
+    <li><strong>Olas Direccionales:</strong> Olas planas que se propagan en una dirección definida.</li>
+  </ul>
+
+  <h3>Objetos Flotantes</h3>
+  <ul>
+    <li><strong>Boyas:</strong> Esferas simples que se elevan y descienden según la altura del agua.</li>
+    <li><strong>Tabla de madera:</strong> Caja 3D que se orienta automáticamente usando las normales de la superficie.</li>
+    <li><strong>Persona flotando:</strong> Modelo articulado de una persona que se adapta a la inclinación del agua.</li>
+    <li><strong>Surfista:</strong> Incluye una tabla de surf con una persona en posición, adaptándose al ángulo de la ola con rotación y orientación dinámica.</li>
+  </ul>
+
+  <h3>Detalles Técnicos</h3>
+  <ul>
+    <li>La superficie del mar se genera con una malla tridimensional y colores interpolados según la altura de la ola.</li>
+    <li>Se calculan normales locales para simular iluminación mediante <code>specular</code> y <code>ambient</code>.</li>
+    <li>Se usa un sistema de coordenadas rotado y escalado para que el eje Y apunte hacia arriba (convención física).</li>
+  </ul>
+
+  <h3>Interacción</h3>
+  <ul>
+    <li>Pulsa <strong>1</strong> para activar ola Gerstner.</li>
+    <li>Pulsa <strong>2</strong> para ola Radial.</li>
+    <li>Pulsa <strong>3</strong> para ola Direccional.</li>
+  </ul>
+
+  <p>Esta práctica combina simulación física, visualización 3D, y representación realista de fluidos para explorar diferentes comportamientos de ondas y su efecto sobre cuerpos flotantes.</p>
+<h3>Vídeo de la simulación</h3>
+  <div class="video-container">
+    <iframe src="https://youtube.com/embed/Hnb2AbMzKhQ" allowfullscreen></iframe>
+  </div>
+</section>
 
   <footer>
     © 2025 - Estudiante de Ingeniería Multimedia
